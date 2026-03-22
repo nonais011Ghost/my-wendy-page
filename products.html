@@ -4,35 +4,66 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Products - Dream Flavours</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-     <h1>Products</h1>
+   <header class="text-center p-3 bg-dark text-white">
+     <h1>Dream Flavours</h1>
      <div class="btn-group mt-2" role="group">
-    <a href="index.html" class="btn btn-outline-light">Home</a>
-    <a href="about.html" class="btn btn-outline-light">About</a>
-    <a href="products.html" class="btn btn-outline-light">Products</a>
-    <a href="gallery.html" class="btn btn-outline-light">Gallery</a>
-    <a href="contact.html" class="btn btn-outline-light">Contact</a>
-  </div>
+       <a href="index.html" class="btn btn-outline-light">Home</a>
+       <a href="about.html" class="btn btn-outline-light">About</a>
+       <a href="products.html" class="btn btn-outline-light">Products</a>
+       <a href="gallery.html" class="btn btn-outline-light">Gallery</a>
+       <a href="contact.html" class="btn btn-outline-light">Contact</a>
+     </div>
    </header>
 
-   <main>
-     <section>
-       <h2>Our Yoghurt Range</h2>
-       <ul>
-         <li>Strawberry Delight</li>
-         <li>Mango Bliss</li>
-         <li>Exotic Mixed Fruits</li>
-         <li>Indigenous Flavours</li>
-       </ul>
-     </section>
+   <main class="container mt-4">
+     <h2 class="text-center mb-4">Our Yoghurt Range</h2>
+     <div class="row">
+       <div class="col-md-4">
+         <div class="card">
+           <img src="images/strawberry.jpeg" class="card-img-top" alt="Strawberry Delight">
+           <div class="card-body">
+             <h5 class="card-title">Strawberry Delight</h5>
+             <p class="card-text">Fresh strawberries blended into creamy yoghurt.</p>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="card">
+           <img src="images/mango.jpeg" class="card-img-top" alt="Mango Bliss">
+           <div class="card-body">
+             <h5 class="card-title">Mango Bliss</h5>
+             <p class="card-text">Sweet mangoes with a tropical twist.</p>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="card">
+           <img src="images/mixed-fruits.jpeg" class="card-img-top" alt="Mixed Fruits">
+           <div class="card-body">
+             <h5 class="card-title">Exotic Mixed Fruits</h5>
+             <p class="card-text">A fusion of indigenous and exotic fruits.</p>
+           </div>
+         </div>
+       </div>
+     </div>
    </main>
 
-   <footer>
+   <footer class="text-center mt-4 p-3 bg-dark text-white">
      <p>&copy; 2026 Dream Flavours</p>
    </footer>
+
+   <script>
+     const currentPage = window.location.pathname.split("/").pop();
+     document.querySelectorAll("header a").forEach(link => {
+       if(link.getAttribute("href") === currentPage){
+         link.classList.remove("btn-outline-light");
+         link.classList.add("btn-primary");
+       }
+     });
+   </script>
 </body>
 </html>
-
