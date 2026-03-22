@@ -16,6 +16,12 @@ header{
     
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 /*Navigation*/
 nav{
@@ -62,7 +68,3 @@ footer{
      padding:5px
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
