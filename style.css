@@ -1,11 +1,10 @@
-/* Reset default browser spacing */
+
 body {
    margin: 0;
    font-family: Arial, sans-serif;
-   background-color: #f4f4f4; /* use a valid color */
+   background-color: #f4f4f4;
 }
 
-/* Header */
 header {
     background-color: #2c5042;
     color: white;
@@ -18,7 +17,6 @@ img {
   height: auto;
 }
 
-/* Navigation */
 nav {
     background-color: #345e4a;
     padding: 10px;
@@ -36,12 +34,11 @@ nav a:hover {
       text-decoration: underline;
 }
 
-/* Main content */
 main {
      padding: 20px;
 }
 
-/* Sections */
+
 section {
        background-color: white;
        padding: 15px;
@@ -49,10 +46,17 @@ section {
        border-radius: 5px;
 }
 
-/* Footer */
 footer {
      background-color: rgb(130, 137, 46);
      color: white;
      text-align: center;
      padding: 5px;
+}
+
+small-react{
+   width:300px;
+   height:200px;
+   object-fit: cover;
+   display: block;
+   margin: 0 auto;
 }
