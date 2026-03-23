@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>About - Dream Flavours</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <div class="btn-group mt-2" role="group">
-    <a href="index.html" class="btn btn-outline-light">Home</a>
-    <a href="about.html" class="btn btn-outline-light">About</a>
-    <a href="products.html" class="btn btn-outline-light">Products</a>
-    <a href="gallery.html" class="btn btn-outline-light">Gallery</a>
-    <a href="contact.html" class="btn btn-outline-light">Contact</a>
-  </div>
-    </header>
+   <header class="text-center p-3 bg-dark text-white">
+     <h1>Dream Flavours</h1>
+     <div class="btn-group mt-2" role="group">
+       <a href="index.html" class="btn btn-outline-light">Home</a>
+       <a href="about.html" class="btn btn-outline-light">About</a>
+       <a href="products.html" class="btn btn-outline-light">Products</a>
+       <a href="gallery.html" class="btn btn-outline-light">Gallery</a>
+       <a href="contact.html" class="btn btn-outline-light">Contact</a>
+     </div>
+   </header>
+    
+   <main class="container mt-4">
+     <h2 class="text-center mb-4">About Us</h2>
+     <section>
+       <p>Dream Flavours is dedicated to crafting delicious, healthy yoghurts using both exotic and indigenous fruits. Our mission is to bring joy to your taste buds while promoting wellness and healthy living.</p>
+       <p>We started as a small local brand and have grown into a trusted name in flavoured yoghurts, loved by families and communities across Botswana.</p>
+       <p>As a beginner web developer, this site is also my first multi‑page project using GitHub Pages — combining my passion for technology with our brand story.</p>
+     </section>
+   </main>
 
-    <main>
-        <p>Hi! I'm a beginner web developer learning how to use GitHub Pages.</p>
-        <p>This is my first multi-page website, and I'm excited to share it with you!</p>
-    </main>
+   <footer class="text-center mt-4 p-3 bg-dark text-white">
+     <p>&copy; 2026 Dream Flavours</p>
+   </footer>
 
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+   <script>
+     const currentPage = window.location.pathname.split("/").pop();
+     document.querySelectorAll("header a").forEach(link => {
+       if(link.getAttribute("href") === currentPage){
+         link.classList.remove("btn-outline-light");
+         link.classList.add("btn-primary");
+       }
+     });
+   </script>
 </body>
 </html>
-
