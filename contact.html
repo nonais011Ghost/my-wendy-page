@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact - Dream Flavours</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contact Me</h1>
-        <div class="btn-group mt-2" role="group">
-    <a href="index.html" class="btn btn-outline-light">Home</a>
-    <a href="about.html" class="btn btn-outline-light">About</a>
-    <a href="products.html" class="btn btn-outline-light">Products</a>
-    <a href="gallery.html" class="btn btn-outline-light">Gallery</a>
-    <a href="contact.html" class="btn btn-outline-light">Contact</a>
-  </div>
-    </header>
+   <header class="text-center p-3 bg-dark text-white">
+     <h1>Dream Flavours</h1>
+     <div class="btn-group mt-2" role="group">
+       <a href="index.html" class="btn btn-outline-light">Home</a>
+       <a href="about.html" class="btn btn-outline-light">About</a>
+       <a href="products.html" class="btn btn-outline-light">Products</a>
+       <a href="gallery.html" class="btn btn-outline-light">Gallery</a>
+       <a href="contact.html" class="btn btn-outline-light">Contact</a>
+     </div>
+   </header>
+    
+   <main class="container mt-4">
+     <h2 class="text-center mb-4">Get in Touch</h2>
+     <p class="text-center">We’d love to hear from you! Reach us at:</p>
+     <p class="text-center">
+       <a href="mailto:example@example.com" class="btn btn-primary">Email Us</a>
+     </p>
 
-    <main>
-        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:example@example.com">example@example.com</a>.</p>
-    </main>
+     <form class="mt-4">
+       <div class="mb-3">
+         <label for="name" class="form-label">Your Name</label>
+         <input type="text" class="form-control" id="name" placeholder="Enter your name">
+       </div>
+       <div class="mb-3">
+         <label for="email" class="form-label">Your Email</label>
+         <input type="email" class="form-control" id="email" placeholder="Enter your email">
+       </div>
+       <div class="mb-3">
+         <label for="message" class="form-label">Message</label>
+         <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+       </div>
+       <button type="submit" class="btn btn-success">Send Message</button>
+     </form>
+   </main>
 
-    <footer>
-        <p>&copy; 2025 Your Name</p>
-    </footer>
+   <footer class="text-center mt-4 p-3 bg-dark text-white">
+     <p>&copy; 2026 Dream Flavours</p>
+   </footer>
+
+   <script>
+     const currentPage = window.location.pathname.split("/").pop();
+     document.querySelectorAll("header a").forEach(link => {
+       if(link.getAttribute("href") === currentPage){
+         link.classList.remove("btn-outline-light");
+         link.classList.add("btn-primary");
+       }
+     });
+
+     document.querySelector("form").addEventListener("submit", function(e){
+       e.preventDefault();
+       alert("Thank you for your message! We'll get back to you soon.");
+     });
+   </script>
 </body>
 </html>
